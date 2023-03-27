@@ -1,45 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Set the page title -->
-    <title>Assignment 03</title>
-
-    <!-- Set the charset we're using to UTF-8 -->
-    <meta charset="UTF-8" />
-
-    <!-- Set the screens default zoom / scale to 1 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- We are using a CSS Reset file to standardize browser default css -->
-    <link rel="stylesheet" href="reset.css" />
-
-    <!-- This is where all of our awesome CSS code goes -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Set the Favicon  -->
-    <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
-  </head>
-  <body>
-    <!--
-
-      ADD YOUR ASSIGNMENT 03 CODE
-
-      YOU MAY REMOVE THE BOILERPLATE CODE BELOW
-
-      IMPORTANT CHECKLIST:
-
-      - Are users able to create and delete to do list items?
-      - Have you set a favicon? (included - but it's a rocket)
-      - Do you have a css reset file? (included)
-      - Has a team member conducted a code review and left a GitHub Issue in your repo?
-      - Have you conducted a code review and left a GitHub Issue on your team member's repo?
-
-    -->
-    <main>
-      <div id="app"></div>
-    </main>
-
-    <!-- This is where we add our awesome JavaScript code -->
-    <script src="./main.js"></script>
-  </body>
-</html>
+    <html lang="en-ca">
+        <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+            <Title> To Do List</Title>
+            </head>
+            <body>
+                <main>
+                    <section>
+                      <p id="p1"></p>
+  <script>
+      var date = new Date();
+      var current_time = date.getHours()+":"+date.getMinutes();
+      document.getElementById("p1").innerHTML = current_time;
+  </script>
+  </section>
+                    <section>
+                        <div class="Taskapp"></div>
+                        <h1> TO DO LIST </h1>
+                    </section>
+                    <section>
+                    <div class="to-do" id="container"></div> 
+                <div>
+                      <form>
+                            <input type="text" id="input" Placeholder= "New Task..."/>
+                <div class="add">
+                    <button id="add-btn">+</button>  
+                </div>     
+                </form>    
+                </div>
+            </section>
+          
+          <section>
+          <div class="to-do container">
+              <ul class="to-do list"></ul>
+          </div>
+      </section>
+                </main>
+                <script src="main.js"></script>
+            </body>
+    </html>
