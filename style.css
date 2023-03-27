@@ -37,6 +37,14 @@
     padding: 3rem;
     gap: 2rem;
   }
+
+  ul{
+    flex: 1;
+    color: white;
+    text-align:center;
+    font-family: Arial,sans-serif;
+    font-size: 55px;
+  }
   
   form input {
     display: flex;
@@ -69,3 +77,4 @@
     border-radius: 2rem;
     outline-color: white;
   }  
+   
