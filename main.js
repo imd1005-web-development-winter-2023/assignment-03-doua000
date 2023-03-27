@@ -1,44 +1,37 @@
-//
-//  JS File
-//  You may remove the code below - it's just boilerplate
-//
+// Selecting input and button elements
+const input = document.getElementById('input');
+const button = document.getElementById('add-btn');
+const list = document.querySelector('.to-do.list');
 
-//
-// Variables
-//
+// Click event listener for button element
+button.addEventListener('click', function(e) {
+  e.preventDefault(); // prevent the form from submitting
 
-// Constants
-const appID = "app";
-const headingText = "To do. To done. ✅";
+  // Checking if  input value is not empty
+  if (input.value !== '') {
+    // Creating a new list item 
+    const listItem = document.createElement('li');
 
-// Variables
+    // Set text content of  list item to  input value
+    listItem.textContent = input.value;
 
-// DOM Elements
-let appContainer = document.getElementById(appID);
+    // Add delete button to list item
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'X';
 
-//
-// Functions
-//
+    // Add click event listener to delete button
+    deleteButton.addEventListener('click', function() {
+      // Remove  list item from the list
+      listItem.remove();
+    });
 
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
+    // Appending  delete button to  list item
+    listItem.appendChild(deleteButton);
+
+    // Append t list item to  list
+    list.appendChild(listItem);
+
+    // Clear  input value
+    input.value = '';
   }
-
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
-
-  // Init complete
-  console.log("App successfully initialised");
-}
-
-//
-// Inits & Event Listeners
-//
-
-inititialise();
+});
